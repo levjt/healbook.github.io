@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn - SignUp</title>
+    <link rel="stylesheet" href="susi.css">
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="row">
+        <!-- signup -->
+        <div class="col is-centered is-flex signup" >
+          <div class="susiform-wrapper is-centered" >
+            <div class="susiform signup" >
+              <i style="font-size:50px;margin:20px" class="fas fa-user-plus"></i>
+              <div class="textinput">
+                <i class="fas fa-user"></i>
+                <input type="text" id="userUp" name="" placeholder="Username...">
+              </div>
+              <div class="textinput">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="mailUp" name="" placeholder="Email...">
+              </div>
+              <div class="textinput">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pwdUp" name="" placeholder="Password...">
+              </div>
+              <div class="textinput">
+                <i class="fas fa-key"></i>
+                <input type="password" name="" id="cpwdUp" placeholder="Confirm password...">
+              </div>
+              <button type="button" class="sibtn" onclick="checkinputUp()" name="button">Sign up</button>
+              <div class="ckbox">
+                <input type="checkbox" id="agreecb" name="" value="">
+                <label for="agreecb">By press sign up,I agree to the<a href="#"> Term </a>and <a href="#">Privacy</a> of <a href="#">Healbook</a></label>
+              </div>
+
+              <p>Or Sign up with:</p>
+              <div class="socialmedialogin">
+                <i class="fab fa-facebook-f" id="facebook"></i>
+                <i class="fab fa-instagram" id="instagram"></i>
+                <i class="fab fa-twitter" id="twitter"></i>
+                <i class="fab fa-google" id="google"></i>
+              </div>
+              <hr>
+              <p>Already have an account? <b onclick="toggle()" class="pointer">Login here!</b></p>
+              <hr>
+                <a href="index.html"><button class="goback"><i class="fas fa-angle-left"></i>Back to homepage</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- signin -->
+        <div class="col is-centered is-flex signin" >
+            <div class="susiform-wrapper is-centered">
+              <div class="susiform signin">
+                <i style="font-size:50px;margin:20px" class="fas fa-user-lock"></i>
+                <div class="textinput">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="userIn" name="" placeholder="Username...">
+                </div>
+                <div class="textinput">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="pwdIn" name="" placeholder="Password...">
+                </div>
+                <button type="button" class="sibtn" onclick="checkinputIn()" name="button">Login</button>
+                <p>Or login with:</p>
+                <div class="socialmedialogin">
+                  <i class="fab fa-facebook-f" id="facebook"></i>
+                  <i class="fab fa-instagram" id="instagram"></i>
+                  <i class="fab fa-twitter" id="twitter"></i>
+                  <i class="fab fa-google" id="google"></i>
+                </div>
+                <hr>
+                <p>Don't have an account? <b onclick="toggle()" class="pointer">Sign up here!</b></p>
+                <p><a href="#">Forgot password?</a></p>
+                <hr>
+                  <a href="index.html"><button class="goback"><i class="fas fa-angle-left"></i>Back to homepage   </button></a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- NOTE: content -->
+      <div class="row contentrow">
+        <div class="col is-centered is-flex">
+          <div class="text signin">
+              <h1>Welcome Back</h1>
+              <p style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="contentimg signin">
+            <img src="images\welcome.svg" alt="">
+          </div>
+        </div>
+        <div class="col is-centered is-flex " >
+          <div class="contentimg signup">
+            <img src="images\new.svg" alt="">
+          </div>
+          <div class="text signup" style="margin-top:50px">
+              <h1 style="float:right">Join with us </h1>
+              <p style="float:right;text-align:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+    </div>
+    <script>
+        function toggle() {
+        document.getElementById("container").classList.toggle("signin");
+        document.getElementById("container").classList.toggle("signup");
+        }
+        function addclass() {
+            container.classList.add("signin");
+        }
+        setTimeout(addclass(),200)
+
+
+        var pwdIn = document.getElementById("pwdIn");
+        var userIn = document.getElementById("userIn");
+        var sibtn = document.getElementById("sibtn");
+
+        var CORRECT_USER = "admin";
+        var CORRECT_PASS = "admin";
+        var CORRECT_USER2 = "user";
+        var CORRECT_PASS2 = "user";
+
+        function checkinputIn() {
+          if (pwdIn.value.length==0 || userIn.value.length==0) {
+            alert("Empty Username or Password!");
+          }else if (userIn.value == CORRECT_USER && pwdIn.value == CORRECT_PASS) {
+            dieu_huongadmin();
+          } else if (userIn.value == CORRECT_USER2 && pwdIn.value == CORRECT_PASS2) {
+            dieu_huonguser();
+          } else {
+            alert("Failed");
+          }
+        }
+
+        function dieu_huongadmin(){
+          location.assign("adminDashBoard.html");
+        }
+
+        function dieu_huonguser(){
+          location.assign("index.html");
+        }
+
+        var userUp = document.getElementById("userUp");
+        var pwdUp = document.getElementById("pwdUp");
+        var cpwdUp = document.getElementById("cpwdUp");
+        var mailUp = document.getElementById("mailUp");
+        function checkinputUp() {
+          // console.log(pwdUp.value);
+          if (userUp.value.length==0 ||mailUp.value.length==0 ||pwdUp.value.length==0 ||cpwdUp.value.length==0) {
+            alert("Can't empty!")
+          } else if (pwdUp.value != cpwdUp.value) {
+            alert("Password and Confirm are not duplicate")
+          } 
+        }
+
+
+    </script>
+  </body>
+</html>

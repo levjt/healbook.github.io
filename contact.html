@@ -1,0 +1,314 @@
+<html lang="en">
+    
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- wow efect -->
+        <link rel="stylesheet" href="css/animate.css">
+    <!-- css -->
+        <link rel="stylesheet" href="css/indexcontact.css">
+    <!-- map -->
+        <script>
+            function initMap() 
+            {
+                const vnmap = { lat: 16.075, lng: 108.224 };
+                const map = new google.maps.Map(document.getElementById("map"), 
+                {
+                    zoom: 18,
+                    center: vnmap,
+                });
+                const marker = new google.maps.Marker(
+                {
+                    position: vnmap,
+                    map: map,
+                });
+            }
+        </script>
+</head>
+
+<body>
+<!-- header -->
+    <section id="header"></section>
+
+
+<!-- modal-->
+    <div id="bodypage">
+        <h1 style="text-align: center;">ContactUs</h1>
+        <div class="row">
+            <div class="wow slideInLeft" data-wow-delay="0.5s">
+                <div class="leftcolumn">
+                    <br>
+                    <div class="row">
+                        <div class="left1">
+                            <h5>FULL NAME</h5>
+                            <input type="text" placeholder="Type your full name here" id="fullname">
+                        </div>
+                        <div class="left2">
+                            <h5>EMAIL ADDRESS</h5>
+                            <input type="text" placeholder="Type your email here" id="email">
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div class="textareadiv">
+                        <h5>MESSAGE</h5>
+                        <textarea id="mess" rows="6" placeholder="Type something here"></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button id="sendbtn" class="contact">SEND TO ADMINS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wow slideInRight" data-wow-delay="0.5s">
+                <div class="rightrightcolumn">
+                    <h3 style="text-align: center;">OUR LOCATION</h3>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- footer -->
+
+
+<section id="footer">
+    <div class="footerContainer">
+        <div class="leftFooter">
+            <div class="experts">
+                <p class="headingFooter">Experts</p>
+                <br>
+                <p class="textFooter">Articles of Experts</p>
+                <br>
+                <p class="textFooter">Heal Experts</p>
+            </div>
+            <div class="aboutus">
+                <p class="headingFooter">About Us</p>
+                <br>
+                <p class="textFooter">Healthy Food</p>
+                <br>
+                <p class="textFooter">Healthy Exercise</p>
+            </div>
+            <div class="support">
+                <p class="headingFooter">Support</p>
+                <br>
+                <p class="textFooter">Features</p>
+                <br>
+                <p class="textFooter">Contact Us</p>
+            </div>
+            <div class="explore">
+                <p class="headingFooter">Explore</p>
+                <br>
+                <p class="textFooter">Control Weight</p>
+                <br>
+                <p class="textFooter">Find A Expert</p> 
+            </div>
+        </div>
+        <div class="rightFooter">
+            <div class="emailFooter">
+                <p class="headingFooter">Contact Admin</p>
+                <br>
+                <p class="textFooter">nktoan.20it1@vku.udn.vn</p>
+                <br>
+                <p class="textFooter">lqviet.20it1@vku.udn.vn</p>
+                <br>
+                <p class="textFooter">pdqhai.20it1@vku.udn.vn</p>
+            </div>
+            <div class="language">
+                <button class="languageBtn" id="engBtn">English</button>
+                <button class="languageBtn">Vietnamese</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- scroll -->
+<a href="#header" id="scroll"><i class="fas fa-arrow-alt-circle-up fa-2x iconScroll"></i></a>
+
+
+<!-- nav -->
+<div id="sideNav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="susi.html">Sign in</a></li>
+    <li><a href="blog.html">Blogs</a></li>
+    <li><a href="experts.html">Experts</a></li>
+    <li><a href="exdiet.html">Exercises</a></li>
+    <li id="Home"><a href="contact.html">Contact</a></li>
+</div>
+
+    <input type="checkbox" id="checkboxMenu">
+	<div class="menu-icon">
+		<div class="menu-line"></div>
+	</div>
+
+
+<!-- social-icons -->
+    <div class="social-icons">
+        <i class="fab fa-facebook-f" id="facebook"></i>
+        <i class="fab fa-instagram" id="instagram"></i>
+        <i class="fab fa-twitter" id="twitter"></i>
+        <i class="fab fa-linkedin-in" id="linked-in"></i>
+        <i class="fab fa-google" id="google"></i>
+    </div>
+
+
+<!-- script -->
+    <!-- wow -->
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+
+    <script>
+        /*Navbar*/
+        var checkboxMenu = document.getElementById("checkboxMenu");
+        var sideNav = document.getElementById("sideNav");
+        var count=0;
+        checkboxMenu.onclick = function() {
+            count++;
+            console.log(count);
+            if (count%2==0) {
+                sideNav.style.right = "-250px";
+            } else {
+                sideNav.style.right = "0";
+            }
+        }
+
+        var mess = document.getElementById("mess");
+        var email = document.getElementById("email");
+        var fullname = document.getElementById("fullname");
+        var sendbtn = document.getElementById("sendbtn");
+
+        sendbtn.onclick = function() {
+            if (mess.value.length==0 && email.value.length==0 && fullname.value.length==0) {
+                alert("Can't empty")
+            }
+        }
+
+
+        /*Bar show div*/
+        function move() 
+        {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() 
+            {
+                if (width >= 100) 
+                {
+                    clearInterval(id);
+                    show();
+                } 
+                else 
+                {
+                    width++;
+                    elem.style.width = width + '%';
+                }
+            }
+        }
+        function show()
+        {
+            document.getElementById("bodypage").style.display = "block";
+            document.getElementById("pagenumber").style.display = "block";
+        }
+
+        /* select */
+        var x, i, j, l, ll, selElmnt, a, b, c;
+
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) 
+        {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) 
+            {
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) 
+                {
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) 
+                    {
+                        if (s.options[i].innerHTML == this.innerHTML) 
+                        {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) 
+                            {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function(e) 
+            {
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+
+        function closeAllSelect(elmnt) 
+        {
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) 
+            {
+                if (elmnt == y[i]) 
+                {
+                    arrNo.push(i)
+                } 
+                else 
+                {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) 
+            {
+                if (arrNo.indexOf(i)) 
+                {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+
+        document.addEventListener("click", closeAllSelect);
+
+        new WOW().init(); 
+    </script>
+    
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKNs6-gsZTHeiVVLwouOMfnEe2awR7msg&callback=initMap&libraries=&v=weekly"
+    ></script>
+</body>
+</html>

@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: 'Poppins', sans-serif;;
+} 
+
+button {
+    transition: all 0.3s ease;
+}
+
+h2 span {
+	color: var(--mainColor);
+}
+
+button {
+	cursor: pointer;
+}
+
+button:hover {
+	border: 2px solid var(--mainColor);
+	background-color: transparent;
+	color: var(--mainColor);
+}
+
+h1 span {
+	color: var(--mainColor);
+}
+
+:root {
+	--mainColor: #F67C92;
+	--snowColor: #F5F5F5;
+	--borderColor: #A9A9A9;
+}
+/* Header */
+
+#headerContainer {
+    width: 100%;
+	height: 100vh;
+	background-image: url(images/background2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.textContainer {
+	float: right;
+	max-width: 450px;
+    margin-top: 150px;
+    margin-right: 150px;
+}
+
+.textContainer h1 {
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.textContainer p {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.square {
+	width: 15px;
+	height: 15px;
+	background-color: var(--mainColor);
+	margin-bottom: 20px;
+}
+
+.textContainer .startBtn {
+	width: 200px;
+	height: 70px;
+	padding: 15px 20px;
+	border: 2px solid var(--mainColor);
+	color: white;
+	font-size: 16px;
+	margin-bottom: 30px;
+	transition: 0.3s;
+	display: inline-block;
+    background: var(--mainColor);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.textContainer .startBtn:hover {
+	background-color: transparent;
+	color: var(--mainColor);
+}
+
+.line {
+	line-height: 12px;
+}
+
+.line-1 {
+	width: 15px;
+	height: 15px;
+	background-color: var(--mainColor);
+	display: inline-block;
+}
+
+.line-2 {
+	width: 80px;
+	height: 1px;
+	background-color: var(--mainColor);
+	display: inline-block;
+}
+
+.line-3 {
+	width: 60px;
+	height: 1px;
+	background-color: var(--mainColor);
+	display: inline-block;
+}
+
+#checkboxMenu {
+	width: 25px;
+	height: 25px;
+	top: 35px;
+	right: 35px;
+	position: fixed;
+	z-index: 2;
+	cursor: pointer;
+	opacity: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line::before {
+	transform: rotate(90deg);
+	top: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line::after {
+	transform: rotate(90deg);
+	top: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line {
+	transform: rotate(135deg);
+	transition: 0.3s;
+}
+
+.menu-icon {
+	width: 25px;
+	height: 25px;
+	top: 35px;
+	right: 35px;
+	opacity: 1;
+	z-index: 1;
+	cursor: pointer;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+}
+
+.menu-line {
+	height: 4px;
+	width: 100%;
+	position: relative;
+	background: black;
+}
+
+.menu-line::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	background: black;
+	top: -8px;
+}
+
+.menu-line::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	background: black;
+	top: 8px;
+}
+
+#sideNav {
+	width: 250px;
+	height: 100vh;
+	background-color: var(--mainColor);
+	top: 0;
+	right: -250px;
+	position: fixed;
+	padding-top: 10px;
+	transition: 0.3s;
+}
+
+#sideNav li {
+	line-height: 30px;
+	margin: 80px;
+	margin-bottom: 50px;
+	margin-left: 20px;
+	list-style: none;
+	padding: 0 15px;
+}
+
+#sideNav li a {
+	text-decoration: none;
+	color: black;
+	font-size: 24px;
+}
+
+#sideNav li:hover {
+	font-weight: bolder;
+}
+
+#Home {
+	font-weight: bolder;
+	border-left: 5px solid black;
+}
+
+.aboutContainer {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 100px;
+	box-sizing: border-box;
+}
+
+.aboutContainer h2 {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.foodContainer, .exercisesContainer {
+	display: flex;
+	padding: 30px;
+	box-sizing: border-box;
+	margin: 30px;
+	box-shadow: 0 0 5px black;
+	border-radius: 20px;
+}
+
+.imgAbout {
+	flex-basis: 30%;
+	background-color: var(--mainColor);
+	padding: 100px 0;
+} 
+
+.imgAbout img {
+	width: 100%;
+}
+
+.textAbout {
+	flex-basis: 70%;
+	box-sizing: border-box;
+	padding: 30px;
+	text-align: left;
+}
+
+
+.headingText {
+	font-size: 28px;
+	font-weight: bolder;
+}
+
+.contentText {
+	font-size: 22px;
+	line-height: 40px;
+}
+
+.readmoreButton {
+	width: 200px;
+	height: 70px;
+	padding: 15px 20px;
+	border: 2px solid var(--mainColor);
+	color: white;
+	font-size: 16px;
+	margin-bottom: 30px;
+	transition: 0.3s;
+	display: inline-block;
+    background: var(--mainColor);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.readmoreButton:hover {
+	background-color: transparent;
+	color: var(--mainColor);
+}
+
+.expertsContainer {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 100px;
+	box-sizing: border-box;
+	background-color: var(--snowColor);
+}
+
+.expertsContainer h2 {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.detailsRow {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.detailCol {
+    flex-basis: 25%;
+    margin: 2.5%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 45px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snowColor);
+    box-shadow: 0 0 5px #696969;
+	border-radius: 15px;
+}
+
+.numberDetails {
+    font-size: 28px !important;
+    color: black !important;
+    font-weight: 500;
+}
+
+.textDetails {
+    font-size: 16px !important;
+    font-weight: 500;
+    margin-bottom: 0px !important;
+}
+
+.card {
+    flex-basis: 50%;
+    margin: 2.5%;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #696969;
+    transition: all 1s ease;
+    animation: delay 0.5s;
+	background-color: white;
+	border-radius: 10px;
+	border-radius: 15px;
+}
+
+.card img {
+	width: 100%;
+	height: 320px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.readmoreBtn {
+    width: 120px;
+    height: 40px;
+    background-color: var(--mainColor);
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    margin: 10px;
+}
+
+.dietContainer {
+    padding: 30px 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dietContainer h2 {
+	font-weight: bold;
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.blogContainer {
+    padding: 30px 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+	background-color: var(--snowColor);
+}
+
+.blogContainer h2 {
+	font-weight: bold;
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.row {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.z {
+	border-radius: 15px;
+}
+
+.z img {
+	border-radius: 15px;
+}
+
+.post {
+	flex-basis: 30%;
+	margin: calc(10%/3);
+	height: 240px;
+	box-shadow: 0 0 5px black;
+	border-radius: 15px;
+}
+
+.post img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+
+.col img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 5px black;
+}
+
+.contactContainer {
+	padding: 30px 120px;
+	align-items: center;
+	justify-content: center;
+}
+
+.col {
+	flex-basis: 50%;
+	margin: 3%;
+}
+
+.headingContact {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.textContact {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.iconDetails {
+	margin-top: 15px;
+	font-size: 30px;
+	color: var(--mainColor);
+}
+
+
+#msgContact {
+    width: 50%;
+    height: 50px;
+    border: 3px solid black;
+    padding: 0 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+	border-radius: 6px;
+}
+
+#sendmsgButton {
+	width: 30%;
+    height: 50px;
+    border: 3px solid black;
+    background-color: var(--mainColor);
+    padding: 0 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: 500;
+	border-radius: 6px;
+	transition: ease-in-out 0.3s;
+}
+
+#sendmsgButton:hover {
+	background-color: white;
+	border-color: var(--mainColor);
+}
+
+.footerContainer {
+	padding: 30px 120px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snowColor);
+	display: flex;
+}
+
+.leftFooter, .rightFooter {
+	display: flex;
+	flex-basis: 50%;
+}
+
+.language, .emailFooter {
+	flex-basis: 48%;
+	margin: 2%;
+	text-align: center;
+}
+
+.explore, .support, .aboutus, .experts {
+	flex-basis: 23%;
+	margin: 2%;
+}
+
+.col60 {
+	flex-basis: 60%;
+}
+
+.col {
+	margin: 3%;
+}
+
+.col40 {
+	flex-basis: 40%;
+}
+
+.headingFooter {
+	font-weight: bolder;
+	color: var(--mainColor);
+	font-size: 25px;
+}
+
+.textFooter {
+	font-size: 16px;
+	color: #888;
+}
+
+.languageBtn {
+	width: 150px;
+	height: 60px;
+	padding: 10px 15px;
+	margin-bottom: 30px;
+	margin-left: 40%;
+	border: 2px solid var(--mainColor);
+	font-size: 20px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 6px;
+}
+
+.languageBtn:hover {
+	color: var(--mainColor);
+	background-color: transparent;
+}
+
+#engBtn {
+	background-color: var(--mainColor);
+	text-decoration: underline;
+	color: white;
+	outline: 1;
+	border: 2px solid var(--mainColor);
+}
+
+#engBtn:hover {
+	background-color: transparent;
+	color: var(--mainColor);
+}
+
+/* social-icons */
+
+.social-icons {
+    width: 50px;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.social-icons {
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 7;
+}
+
+.social-icons i {
+    display: block;
+    width: 20px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+	transition: 0.5s;
+}
+
+#facebook:hover {
+    color: #3b5998;
+}
+
+#instagram:hover {
+    color: #d6249f;
+}
+
+#twitter:hover {
+    color: #1da1f2;
+}
+
+#google:hover {
+    color: #dd4b39;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: 40px auto;
+	padding: 30px;
+	border: 1px solid #888;
+	width: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+	text-align: left;
+	text-indent: 20px;
+}
+
+.detailsDoctor {
+	padding: 15px;
+	line-height: 30px;
+}
+
+.name {
+	text-align: left;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.details {
+	text-align: left;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+
+/* The Close Button */
+
+.close {
+	color: black;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	color: black;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.imgmodal {
+	width: 100%;
+}
+
+.blogContainer img {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+
+	.blogContainer img {
+		height: 240px;
+	}
+
+	.textContainer {
+		max-width: 250px;
+		margin: 160px 50px;
+	}
+
+	.textContainer h1 {
+		font-size: 34px;
+		margin-bottom: 20px;
+	}
+
+	.textContainer p {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	#sideNav li {
+		line-height: 50px;
+		margin: 50px;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		list-style: none;
+		padding: 0 15px;
+	}
+
+	
+	.aboutContainer {
+		padding: 30px 10px;
+	}
+
+	.aboutContainer h2 {
+		font-size: 25px;
+	}
+
+	.foodContainer, .exercisesContainer {
+		display: block;
+	}
+
+	.imgAbout {
+		display: none;
+	}
+
+	.expertsContainer {
+		padding: 30px 30px;
+	}
+
+	.expertsContainer h2 {
+		font-size: 25px;
+	}
+
+	.detailsRow {
+		display: block;
+	}
+
+	.card {
+		margin-bottom: 30px;
+	}
+
+	.dietContainer {
+		padding: 30px 30px;
+	}
+
+	.dietContainer h2 {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+
+	.dietContainer p {
+		font-size: 16px;
+	}
+
+	.blogContainer {
+		padding: 30px 30px;
+	}
+	
+	.blogContainer h2 {
+		font-size: 25px;
+	}
+
+	.contactContainer {
+		padding: 30px;
+	}
+
+	.post {
+		margin-bottom: 30px;
+	}
+	
+	.row {
+		display: block;
+	}
+
+	#msgContact {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	#sendmsgButton {
+		width: 100%;
+	}
+
+	.footerContainer {
+		padding: 30px;
+		display: block;
+	}
+
+	.leftFooter, .rightFooter {
+		display: block;
+		text-align: center;
+	}
+
+	.explore, .support, .aboutus, .experts {
+		margin-bottom: 30px;
+	}
+
+	.language {
+		display: block;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.languageBtn {
+		margin: 5px;
+	}
+
+	.social-icons i {
+		font-size: 15px;
+	}
+	#checkboxMenu {
+		right: 25px;
+	}
+	.menu-icon {
+		right: 25px;
+	}
+
+	.col40, .col60 {
+		margin-bottom: 30px;
+	}
+
+	.detailCol {
+		margin-bottom: 20px;
+	}
+
+	.card img {
+		height: auto;
+	}
+
+}

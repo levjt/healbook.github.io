@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="adminCustomer.css">
+  <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
+</head>
+<body>
+  <!-- Topbar -->
+  <nav class="navbar navbar-expand-lg navbar-light nav_shadow">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar_auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Appearence</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="" class="nav-link">Link web: <span>http://healbook.000webhostapp.com</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link nav_button">Share</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul class="sidebar_icon">
+      <li><a href="adminDashBoard.html"><em class="fas fa-th-large"></em></a></li>
+      <li class="active"><em class="fas fa-user"></em></li>
+      <li><a href="adminDiet.html"><em class="fas fa-suitcase"></em></a></li>
+      <li><a href="adminSetting.html"><em class="fas fa-cog"></em></a></li>
+    </ul>
+  </aside>
+
+  <!-- Graph -->
+  <div class="graph_area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="user_name">
+            <h2>Welcome, <strong>Toan Nguyen</strong></h2>
+          </div>
+        </div>
+        <div class="col-lg-3 offset-lg-5">
+          <div class="add_link">
+            <button class="btn btn-secondary">Add a New Link</button>
+          </div>
+        </div>
+      </div>
+      <div class="value_cards_sec">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="value_card card_1 shadow-lg p-3 mb-5 bg-body rounded">
+              <p>Daily Views</p>
+              <h3 class="countup" data-target="6302">0</h3>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="value_card card_2 shadow-lg p-3 mb-5 bg-body rounded">
+              <p>Customers</p>
+              <h3 class="countup" data-target="2063">0</h3>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="value_card card_3 shadow-lg p-3 mb-5 bg-body rounded">
+              <p>Blogs</p>
+              <h3 class="countup" data-target="8302">0</h3>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="value_card card_4 shadow-lg p-3 mb-5 bg-body rounded">
+              <p>Rate</p>
+              <h3 class="countup" data-target="4.8">0</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog_sec">
+        <div class="row">
+          <div class="col-lg-8 p-2 m-2">
+              <h3>Blog</h3>
+              <div class="row m-2">
+                  <div class="col-lg-4">
+                      <img src="images/aboutExercise1.jpg" alt="">
+                  </div>
+                  <div class="col-lg-5">
+                      <p class="title">Aches, pains, and muscle cramps — do well-advertised remedies actually work?</p>
+                      <p class="content">A woman applies a cream to her sore joints and says it’s changed her life. Two sports heroes sing the praises of an over-the-counter cream for their aches and pains. A celebrity physician claims that spray-on foam can end your daily suffering.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="btn btn-danger">Edit <i class="fas fa-edit"></i></button>
+                      <button class="btn btn-light">Delete <i class="fas fa-trash-alt"></i></button>
+                  </div>
+              </div>
+              <div class="row m-2">
+                  <div class="col-lg-4">
+                      <img src="images/covid.png" alt="">
+                  </div>
+                  <div class="col-lg-5">
+                      <p class="title">Vietnam Business Operations and the Coronavirus: Updates</p>
+                      <p class="content">As of May 28, 2021, Vietnam’s Ministry of Health confirmed a total of 6,316 cases of COVID-19. However, 2,853 of the affected patients have recovered and been discharged from hospitals.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="btn btn-danger">Edit <i class="fas fa-edit"></i></button>
+                      <button class="btn btn-light">Delete <i class="fas fa-trash-alt"></i></button>
+                  </div>
+              </div>
+              <div class="row m-2">
+                  <div class="col-lg-4">
+                      <img src="images/covidpre.png" alt="">
+                  </div>
+                  <div class="col-lg-5">
+                      <p class="title">How to Protect Yourself & Others</p>
+                      <p class="content">Importance thing to know to protect yourself and others in middle of covid-19 disease. Compliance 5K of Vietnam Goverment.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="btn btn-danger">Edit <i class="fas fa-edit"></i></button>
+                      <button class="btn btn-light">Delete <i class="fas fa-trash-alt"></i></button>
+                  </div>
+              </div>
+              <div class="row m-2">
+                  <div class="col-lg-4">
+                      <img src="images/ex.jpg" alt="">
+                  </div>
+                  <div class="col-lg-5">
+                      <p class="title">Aches, pains, and muscle cramps — do well-advertised remedies actually work?</p>
+                      <p class="content">A woman applies a cream to her sore joints and says it’s changed her life. Two sports heroes sing the praises of an over-the-counter cream for their aches and pains. A celebrity physician claims that spray-on foam can end your daily suffering.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="btn btn-danger">Edit <i class="fas fa-edit"></i></button>
+                      <button class="btn btn-light">Delete <i class="fas fa-trash-alt"></i></button>
+                  </div>
+              </div>
+              <div class="row m-2">
+                  <div class="col-lg-4">
+                      <img src="images/covidpre.png" alt="">
+                  </div>
+                  <div class="col-lg-5">
+                      <p class="title">How to Protect Yourself & Others</p>
+                      <p class="content">Importance thing to know to protect yourself and others in middle of covid-19 disease. Compliance 5K of Vietnam Goverment.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="btn btn-danger">Edit <i class="fas fa-edit"></i></button>
+                      <button class="btn btn-light">Delete <i class="fas fa-trash-alt"></i></button>
+                  </div>
+              </div>
+              <div class="pageNumber">
+                <ul>
+                    <li>
+                        <a href="#">&lt;</a>
+                    </li>
+                    <li>
+                        <a class="activeNumber" href="#">1</a>
+                    </li>
+                    <li>    
+                        <a href="#">2</a>
+                    </li>
+                    <li>   
+                        <a href="#">3</a>
+                    </li>
+                    <li>   
+                        <a href="#">&gt;</a>
+                    </li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 p-2 m-2">
+                <h3>Lasted Customer</h3>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Toan Nguyen<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Quang Minh<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Le Viet<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Quang Hai<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Quang Muoi<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Sang Bui<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Duc Hai<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Ngoc Khanh<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Thu Trang<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Duc Vo<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Khanh Toan<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Khanh Hung<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Huy Hoang<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>John Pham<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Tonny Dang<br><span>1 min</span></h4></div></div>
+                </div>
+                <div class="recentRow">
+                    <div class="recentImg"><div class="imgBox"><img src="images/avt.png"></div></div>
+                    <div class="recentName"><div><h4>Jisoo Kim<br><span>1 min</span></h4></div></div>
+                </div>
+          </div>
+        </div>
+        <div class="upload-sec">
+            <h3>Upload Blog</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="text" id="email" placeholder="Email">
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" id="title" placeholder="Title">
+                    </div>
+                </div>
+                <div id="editor"></div>
+                <input type="file" id="fileInput">
+                <br>
+                <button class="btn btn-info text-body fw-bold">Upload</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const counters = document.querySelectorAll('.countup');
+    const speed = 1000; // The lower the slower
+
+    counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = Math.ceil(target / 1000);
+      if (count < target) {
+        // Add inc to count and output in counter
+        counter.innerText = count + inc;
+        // Call function every ms
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+</body>
+</html>

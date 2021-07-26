@@ -1,0 +1,560 @@
+<html lang="en">
+    
+<head>
+    <title>HealExperts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- wow efect -->
+        <link rel="stylesheet" href="css/animate.css">
+    <!-- css -->
+        <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<!-- header -->
+    <section id="header">
+        <div class="container">
+            <h1>HealExperts</h1>
+        </div>
+
+    <!-- introduce -->
+        <div class="containerintro">
+            <div class="square"></div>
+            <p>If you have any health problems or have any questions, please contact our <span style="font-weight: bold;">experts</span>.</p>
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span><br>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- before begin -->
+    <div id="beforebegin">
+        <div class="container2">
+            <h1 style="text-align: center;"> Let us help you find the experts you want </h1>
+        </div>
+
+        <div class="container2">
+            <h3 style="text-align: center;font-weight: normal;">Please answer the question bellow and click "Find experts". <br>Or you can click "Find experts" without answering the question if it bothers you. </h3>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>What is the specialty you want to consult ?</p>
+            </div>
+            <div class="col">
+                <div class="custom-select" style="width:100%;">
+                    <select>
+                        <option value="0">Your answer</option>
+                        <option value="1">Muscles, bones, joints</option>
+                        <option value="2">Digestive system</option>
+                        <option value="3">Heart system</option>
+                        <option value="4">Nutrition</option>
+                        <option value="5">Dentomaxillofacial</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <p>Your area</p>
+            </div>
+            <div class="col">
+                <div class="custom-select" style="width:100%;">
+                    <select>
+                        <option value="0">Your answer</option>
+                        <option value="1">Danang</option>
+                        <option value="2">Hanoi</option>
+                        <option value="3">Ho Chi Minh City</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>How can our experts contact you ?</p>
+            </div>
+            <div class="col">
+                <div class="custom-select" style="width:100%;">
+                    <select>
+                        <option value="0">Your answer</option>
+                        <option value="1">By Email</option>
+                        <option value="2">By phone number</option>
+                        <option value="3">By Facebook</option>
+                        <option value="4">By Zalo </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%;text-align: center;">
+            <button class="quickcontact" onclick="move()"><i class="fas fa-user-md"></i>&nbsp;&nbsp;&nbsp;FIND EXPERTS</button>
+        </div>
+        
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+    </div>
+
+
+
+<!-- body -->
+    <div id="bodypage">
+        <hr style="background-color:#F67C92;margin-left: 100px;margin-right: 100px;">
+        
+        <div class="container2" style="margin-bottom:20px">
+            <h1 style="text-align: center;"> The experts tailored to your requirements : </h1>
+        </div>
+        
+        <div class="row">   <!-- row 1 -->
+            <div data-wow-delay="0.5s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava1.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Alison</h1>
+                        <div class="major">Nutrition</div>
+                        <div class="major">Digestive system</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 32 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Danang</p>
+                        </div>
+                        <form method="get" action="Alison.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div data-wow-delay="1s" class="wow bounceInUp">
+                <div class="mid">
+                    <div class="pic" style="background-image: url('images/ava2.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Cristia</h1>
+                        <div class="major">Muscles</div>
+                        <div class="major">Joints</div>
+                        <div class="major">Bones</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 8 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Ho Chi Minh City</p>
+                        </div>
+                        <form method="get" action="Cristia.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div data-wow-delay="1.5s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava3.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Jenny</h1>
+                        <div class="major">Heart system</div>
+                        <div class="major">Nutrition</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 5 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Danang</p>
+                        </div>
+                        <form method="get" action="Jenny.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  <!-- end row 1 -->
+        
+        <div class="row">   <!-- row 2 -->
+            <div data-wow-delay="2s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava4.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Wo</h1>
+                        <div class="major">Muscles</div> 
+                        <div class="major">Nutrition</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 10 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Hanoi</p>
+                        </div>
+                        <form method="get" action="Wo.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-wow-delay="2.5s" class="wow bounceInUp">
+                <div class="mid">
+                    <div class="pic" style="background-image: url('images/ava5.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Alice</h1>
+                        <div class="major">Digestive system</div>
+                        <div class="major">Heart system</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 18 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Hanoi</p>
+                        </div>
+                        <form method="get" action="Alice.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div data-wow-delay="3s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava6.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Beck</h1>
+                        <div class="major">Heart system</div>
+                        <div class="major">Nutrition</div>
+                        <div class="major">Joints</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 15 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Ho Chi Minh City</p>
+                        </div>
+                        <form method="get" action="Beck.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   <!-- end row 2 -->
+
+        <div class="row">   <!-- row 3 -->
+            <div data-wow-delay="3.5s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava8.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Lisa</h1>
+                        <div class="major">Dentomaxillofacial</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 6 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Ho Chi Minh City</p>
+                        </div>
+                        <form method="get" action="Lisa.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div data-wow-delay="4s" class="wow bounceInUp">
+                <div class="mid">
+                    <div class="pic" style="background-image: url('images/ava7.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. Dylan</h1>
+                        <div class="major">Nutrition</div>
+                        <div class="major">Heart system</div>
+                        <div class="major">Bones</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 5 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Danang</p>
+                        </div>
+                        <form method="get" action="Dylan.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div data-wow-delay="4.5s" class="wow bounceInUp">
+                <div class="column">
+                    <div class="pic" style="background-image: url('images/ava9.png')"></div>
+                    <hr style="background-color:#F67C92;margin-left: 20%;margin-right: 20%;">
+                    <div class="columncontent">
+                        <h1 class="nameex">Dr. John</h1>
+                        <div class="major">Digestive system</div>
+                        <div class="major">Muscles</div>
+                    </div>
+                    <div class="moreinf">
+                        <div class="moreinftext">
+                            <p><i class="fas fa-graduation-cap"></i> PhD</p>
+                            <p><i class="far fa-address-card"></i> Has 23 years of experience</p>
+                            <p><i class="fas fa-map-marker-alt"></i> &nbsp;Danang</p>
+                        </div>
+                        <form method="get" action="John.html">
+                            <button class="contact">Read more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   <!-- end row 3 -->    
+    </div>
+
+
+<!-- pagenumbers -->
+    <div id=pagenumber style="width: 100%;display: none">
+        <div class="pagination">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+        <br><br><br><br><br>
+    </div>
+
+    
+    
+    
+<!-- footer -->
+    <section id="footer">
+        <div class="footerContainer">
+            <div class="leftFooter">
+                <div class="experts">
+                    <p class="headingFooter">Experts</p>
+                    <br>
+                    <p class="textFooter">Articles of Experts</p>
+                    <br>
+                    <p class="textFooter">Heal Experts</p>
+                </div>
+                <div class="aboutus">
+                    <p class="headingFooter">About Us</p>
+                    <br>
+                    <p class="textFooter">Healthy Food</p>
+                    <br>
+                    <p class="textFooter">Healthy Exercise</p>
+                </div>
+                <div class="support">
+                    <p class="headingFooter">Support</p>
+                    <br>
+                    <p class="textFooter">Features</p>
+                    <br>
+                    <p class="textFooter">Contact Us</p>
+                </div>
+                <div class="explore">
+                    <p class="headingFooter">Explore</p>
+                    <br>
+                    <p class="textFooter">Control Weight</p>
+                    <br>
+                    <p class="textFooter">Find A Expert</p> 
+                </div>
+            </div>
+            <div class="rightFooter">
+                <div class="emailFooter">
+                    <p class="headingFooter">Contact Admin</p>
+                    <br>
+                    <p class="textFooter">nktoan.20it1@vku.udn.vn</p>
+                    <br>
+                    <p class="textFooter">lqviet.20it1@vku.udn.vn</p>
+                    <br>
+                    <p class="textFooter">pdqhai.20it1@vku.udn.vn</p>
+                </div>
+                <div class="language">
+                    <button class="languageBtn" id="engBtn">English</button>
+                    <button class="languageBtn">Vietnamese</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- scroll -->
+    <a href="#header" id="scroll"><i class="fas fa-arrow-alt-circle-up fa-2x iconScroll"></i></a>
+
+
+<!-- social icon -->
+    <div class="social-icons">
+        <i class="fab fa-facebook-f" id="facebook"></i>
+        <i class="fab fa-instagram" id="instagram"></i>
+        <i class="fab fa-twitter" id="twitter"></i>
+        <i class="fab fa-google" id="google"></i>
+    </div>
+
+
+<!-- nav -->
+    <div id="sideNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="susi.html">Sign in</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li id="Home"><a href="experts.html">Experts</a></li>
+        <li><a href="exdiet.html">Exercises</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </div>
+
+    <input type="checkbox" id="checkboxMenu">
+    <div class="menu-icon"><div class="menu-line"></div></div>
+
+
+<!-- script -->
+    <!-- wow -->
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+
+    <script>
+        /*Navbar*/
+        var checkboxMenu = document.getElementById("checkboxMenu");
+        var sideNav = document.getElementById("sideNav");
+        var count=0;
+        checkboxMenu.onclick = function() {
+            count++;
+            console.log(count);
+            if (count%2==0) {
+                sideNav.style.right = "-250px";
+            } else {
+                sideNav.style.right = "0";
+            }
+        }
+
+        /*Bar show div*/
+        function move() 
+        {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() 
+            {
+                if (width >= 100) 
+                {
+                    clearInterval(id);
+                    show();
+                } 
+                else 
+                {
+                    width++;
+                    elem.style.width = width + '%';
+                }
+            }
+        }
+        function show()
+        {
+            document.getElementById("bodypage").style.display = "block";
+            document.getElementById("pagenumber").style.display = "block";
+        }
+
+        /* select */
+        var x, i, j, l, ll, selElmnt, a, b, c;
+
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) 
+        {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) 
+            {
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) 
+                {
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) 
+                    {
+                        if (s.options[i].innerHTML == this.innerHTML) 
+                        {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) 
+                            {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function(e) 
+            {
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+
+        function closeAllSelect(elmnt) 
+        {
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) 
+            {
+                if (elmnt == y[i]) 
+                {
+                    arrNo.push(i)
+                } 
+                else 
+                {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) 
+            {
+                if (arrNo.indexOf(i)) 
+                {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+
+        document.addEventListener("click", closeAllSelect);
+
+        new WOW().init(); 
+    </script>
+
+
+</body>
+</html>
